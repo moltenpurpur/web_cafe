@@ -13,8 +13,7 @@ block content
                     span.text-danger #{val.status}
                 else
                     span.text-warning #{val.status}
-                if val.status==='Busy before lunch'
-                    span  (#{val.date_start_formatted})
+                span  (#{val.date_start_formatted})
 
         else
             li There are no free tables.
