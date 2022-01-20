@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+    each table in table_list
+        li
+            a(href=table.url) table №#{table.numberTable}
+            |  (number of seats: #{table.numberOfSeats})
+
+    else
+        li There are no tables.

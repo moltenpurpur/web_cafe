@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+    h1 Status update:
+
+    div(style='margin-left:20px;margin-top:20px')
+
+        dl
+            dd Table: #{table.numberTable}
+            dd #{table_status.status}
+            dd #{table_status.date_start_formatted}
+            dd Your booking id: #{table_status._id}

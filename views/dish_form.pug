@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1 #{title}
+
+    form(method='POST' action='')
+        div.form-group
+            label(for='nameDish') Dish:
+            input#nameDish.form-control(type='text', placeholder='food, drink etc.' name='nameDish' value=(undefined===dish ? '' : dish.nameDish))
+
+            label(for='composition') Composition:
+            input#composition.form-control(type='text', placeholder='ingredient 1, ingredient 2 etc.' name='composition' value=(undefined===dish ? '' : dish.composition))
+
+            label(for='cost') Cost:
+                input#cost.form-control(type='Number', placeholder='prise' name='cost' value=(undefined === dish ? '' : dish.cost))
+
+            label(for='grams') Grams:
+                input#grams.form-control(type='text', placeholder='100 gr, 500ml etc.' name='grams' value=(undefined === dish ? '' : dish.grams))
+        button.btn.btn-primary(type='submit') Submit
+
+    if errors
+        ul
+            for error in errors
+                li!= error.msg

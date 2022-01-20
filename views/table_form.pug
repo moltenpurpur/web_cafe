@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1=title
+
+    form(method='POST' action='')
+        div.form-group
+            label(for='numberTable') Number Table:
+            input#numberTable.form-control(type='Number' placeholder='10, 26, 40...' name='numberTable' required='true' value=(undefined===table ? '' : table.numberTable) )
+
+            label(for='numberOfSeats') Number Of Seats:
+            input#numberOfSeats.form-control(type='Number' placeholder='min: 2, max: 8' name='numberOfSeats' required='true' value=(undefined===table ? '' : table.numberOfSeats))
+
+        button.btn.btn-primary(type='submit') Submit
+    if errors
+        ul
+            for error in errors
+                li!= error.msg

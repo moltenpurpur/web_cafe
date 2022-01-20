@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+        each waiter in waiter_list
+            li
+                a(href=waiter.url) #{waiter.nameWaiter}
+                |  (#{waiter.photo})
+
+        else
+            li There are no waiters.

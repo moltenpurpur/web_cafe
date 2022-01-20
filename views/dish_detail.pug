@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+    h1 Dish: #{dish.nameDish}
+
+    div(style='margin-left:20px;margin-top:20px')
+
+        dl
+                dd #{dish.composition}
+                dd #{dish.grams}
+                dd #{dish.cost}

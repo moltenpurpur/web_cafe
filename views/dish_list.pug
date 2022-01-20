@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+        each dish in dish_list
+            li
+                a(href=dish.url) #{dish.nameDish}
+                |  cost: #{dish.cost} rub.
+
+        else
+            li There a
